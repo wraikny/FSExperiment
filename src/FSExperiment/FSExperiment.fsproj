@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <DebugType>portable</DebugType>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Reactive" />
+    <Compile Include="Reactive.fs" />
     <Compile Include="FSExperiment.fs" />
     <None Include="Script.fsx" />
   </ItemGroup>
