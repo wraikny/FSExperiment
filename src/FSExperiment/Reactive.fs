@@ -30,7 +30,9 @@ module Extension =
 
         member this.Select(f : 'a -> 'b) =
             Observable.Create(fun o ->
-                this.Subscribe(f >> o.OnNext)
+                this.Subscribe( fun x ->
+                    o.OnNext(f x)
+                )
             )
 
         member this.Where(f : 'a -> bool) =
